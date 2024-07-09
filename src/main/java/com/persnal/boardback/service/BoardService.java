@@ -8,10 +8,12 @@ import org.springframework.http.ResponseEntity;
 
 public interface BoardService {
     ResponseEntity<? super GetBoardResponse> getBoard(int boardNum);
+    ResponseEntity<? super GetUserBoardResponse> getUserBoard(String email);
     ResponseEntity<? super GetFavoriteListResponse> getFavoriteList(int boardNum);
     ResponseEntity<? super GetCommentListResponse> getCommentList(int boardNum);
     ResponseEntity<? super GetLatestBoardListResponse> getLatestBoardListItem();
     ResponseEntity<? super GetTop3BoardListResponse> getTop3BoardList();
+    ResponseEntity<? super GetSearchBoardListResponse> getSearchBoardList(String searchWord, String preSearchWord);
     ResponseEntity<? super PostBoardResponse> postBoard(PostBoardRequest req, String email);
     ResponseEntity<? super PostCommentResponse> postComment(PostCommentRequest req, String email, int boardNum);
     ResponseEntity<? super PutFavoriteResponse> putFavorite(int boardNum, String email);

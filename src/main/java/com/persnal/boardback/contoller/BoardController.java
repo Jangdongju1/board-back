@@ -23,6 +23,14 @@ public class BoardController {
         return response;
     }
 
+    @GetMapping("user-board-list/{email}")
+    public ResponseEntity<? super GetUserBoardResponse> getUserBoard(@PathVariable("email") String email) {
+        ResponseEntity<? super GetUserBoardResponse> response = boardService.getUserBoard(email);
+        return response;
+
+    }
+
+
     @PostMapping("")
     public ResponseEntity<? super PostBoardResponse> postBoard(@Validated @RequestBody PostBoardRequest postBoardRequest,
                                                                @AuthenticationPrincipal String email) {
@@ -63,15 +71,25 @@ public class BoardController {
         ResponseEntity<? super GetIncreaseViewCountResponse> response = boardService.increaseViewCount(boardNum);
         return response;
     }
+
     @GetMapping("latest-list")
     public ResponseEntity<? super GetLatestBoardListResponse> getLatestBoardList() {
         ResponseEntity<? super GetLatestBoardListResponse> response = boardService.getLatestBoardListItem();
 
         return response;
     }
+
     @GetMapping("/top-3")
-    public ResponseEntity<? super GetTop3BoardListResponse> getTop3BoardList(){
+    public ResponseEntity<? super GetTop3BoardListResponse> getTop3BoardList() {
         ResponseEntity<? super GetTop3BoardListResponse> response = boardService.getTop3BoardList();
+        return response;
+    }
+
+    @GetMapping(value = {"/search-list/{searchWord}", "/search-list/{searchWord}/{preSearchWord}"})
+    public ResponseEntity<? super GetSearchBoardListResponse> getSearchBoardList(
+            @PathVariable(value = "searchWord") String searchWord,
+            @PathVariable(value = "preSearchWord", required = false) String preSearchWord) {
+        ResponseEntity<? super GetSearchBoardListResponse> response = boardService.getSearchBoardList(searchWord, preSearchWord);
         return response;
     }
 

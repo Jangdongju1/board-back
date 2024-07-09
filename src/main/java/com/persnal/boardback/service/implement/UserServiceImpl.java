@@ -5,6 +5,7 @@ import com.persnal.boardback.common.Utils;
 import com.persnal.boardback.common.logger.DBLogger;
 import com.persnal.boardback.dto.response.ResponseDto;
 import com.persnal.boardback.dto.response.user.GetSignInUserResponse;
+import com.persnal.boardback.dto.response.user.GetUserResponse;
 import com.persnal.boardback.entity.UserEntity;
 import com.persnal.boardback.repository.UserRepository;
 import com.persnal.boardback.service.UserService;
@@ -33,5 +34,19 @@ public class UserServiceImpl implements UserService {
             return ResponseDto.databaseError();
         }
         return GetSignInUserResponse.success(userEntity);
+    }
+
+    @Override
+    public ResponseEntity<? super GetUserResponse> getUser(String email) {
+        UserEntity userEntity = null;
+        try {
+            userEntity = userRepository.findByUserEmail(email);
+            if (userEntity == null) return GetUserResponse.notExistUser();
+
+        }catch (Exception e){
+            logger.error(GlobalVariable.logPattern, getClass().getName(),Utils.getStackTrace(e));
+            return ResponseDto.databaseError();
+        }
+        return GetUserResponse.success(userEntity);
     }
 }

@@ -48,8 +48,8 @@ public class WebSecurityConfig {
 
         httpSecurity.authorizeHttpRequests(authorizeRequests -> {// 인증이 필요없는 URL에 대한 권한 허용
             authorizeRequests
-                    .requestMatchers("/","/api/v1/auth/**","/api/v1/search/**").permitAll()  // 특정 URL에 대해서 접근을 허용
-                    .requestMatchers(HttpMethod.GET, "/api/v1/board/**","/api/v1/user/*","/file/*").permitAll() // 특정 http method & URL에 대해 허용.
+                    .requestMatchers("/","/api/v1/auth/**").permitAll()  // 특정 URL에 대해서 접근을 허용
+                    .requestMatchers(HttpMethod.GET, "/api/v1/board/**","/api/v1/user/*","/file/*","/api/v1/search/**").permitAll() // 특정 http method & URL에 대해 허용.
                     .requestMatchers(HttpMethod.POST, "file/upload").permitAll()
                     .anyRequest().authenticated();
 

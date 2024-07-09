@@ -17,4 +17,13 @@ public class SearchWordEntity {
     private String searchWord = "";
     private String relationWord = "";
     private boolean relation = false;
+
+    public SearchWordEntity(String word, String relWord, boolean rel){
+        this.searchWord = word;
+        this.relationWord = relWord;
+        this.relation = rel;
+    }
+
+
+
 }

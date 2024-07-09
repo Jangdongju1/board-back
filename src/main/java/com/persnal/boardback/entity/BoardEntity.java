@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Getter
 @NoArgsConstructor
@@ -33,6 +34,7 @@ public class BoardEntity {
 
     public BoardEntity(PostBoardRequest req, String email, UserEntity userEntity) {
         String writeDate = Utils.getNowTime(LocalDateTime.now());
+        List<String> boardImgList = req.getBoardImgList();
 
         this.title = req.getTitle();
         this.content = req.getContent();
@@ -40,6 +42,9 @@ public class BoardEntity {
         this.writeDate = writeDate;
         this.nickname = userEntity.getNickname();
         this.writerProfileImg = userEntity.getProfileImg();
+        if (!boardImgList.isEmpty()){
+            boardTitleImg = boardImgList.get(0);
+        }
     }
 
     // 조회수 증가 메서드

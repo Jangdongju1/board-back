@@ -17,6 +17,7 @@ import com.persnal.boardback.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -33,6 +34,7 @@ public class BoardServiceImpl implements BoardService {
     private final BoardImgRepository boardImgRepository;
     private final FavoriteRepository favoriteRepository;
     private final CommentRepository commentRepository;
+    private final SearchWordRepository searchWordRepository;
     private final BoardListViewRepository boardListViewRepository;
 
 
@@ -52,6 +54,21 @@ public class BoardServiceImpl implements BoardService {
             return ResponseDto.databaseError();
         }
         return GetBoardResponse.success(resultSet, imageEntities);
+    }
+
+    @Override
+    public ResponseEntity<? super GetUserBoardResponse> getUserBoard(String email) {
+        List<BoardEntity> userBoardEntities = null;
+        try {
+            boolean existedUser = userRepository.existsByUserEmail(email);
+            if (!existedUser) return GetUserBoardResponse.notExistUser();
+            userBoardEntities = boardRepository.findAllByUserEmailOrderByWriteDateDesc(email);
+
+        } catch (Exception e) {
+            logger.error(GlobalVariable.logPattern, getClass().getName(), Utils.getStackTrace(e));
+            return ResponseDto.databaseError();
+        }
+        return GetUserBoardResponse.success(userBoardEntities);
     }
 
     // 게시물의 게시를 담당하는 작업. 1)게시글의 내용을 저장 2) 이미지 리스트를 저장.
@@ -287,5 +304,27 @@ public class BoardServiceImpl implements BoardService {
             return ResponseDto.databaseError();
         }
         return GetTop3BoardListResponse.success(list);
+    }
+
+    @Override
+    public ResponseEntity<? super GetSearchBoardListResponse> getSearchBoardList(String searchWord, String preSearchWord) {
+        List<BoardEntity> entities = new ArrayList<>();
+        try {
+            entities = boardRepository.findByTitleContainsOrContentContainsOrderByWriteDateDesc(searchWord, searchWord);
+            // 검색 로그 남기기.
+            SearchWordEntity searchWordEntity = new SearchWordEntity(searchWord, preSearchWord, false);
+            searchWordRepository.save(searchWordEntity);
+            // 이전 검색어가 존재하는가?
+            boolean relation = preSearchWord != null;
+            if (relation) {
+                searchWordEntity = new SearchWordEntity(preSearchWord, searchWord, relation);
+                searchWordRepository.save(searchWordEntity);
+            }
+
+        } catch (Exception e) {
+            logger.error(GlobalVariable.logPattern, getClass().getName(), Utils.getStackTrace(e));
+            return ResponseDto.databaseError();
+        }
+        return GetSearchBoardListResponse.success(entities);
     }
 }

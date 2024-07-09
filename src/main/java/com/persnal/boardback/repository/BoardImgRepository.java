@@ -14,4 +14,6 @@ public interface BoardImgRepository  extends JpaRepository<BoardImgEntity, Integ
     // @Transactional 하나의 작업(트랜젝션)으로 묶기 위한 어노테이션.
     @Transactional
     void deleteByBoardNum(int boardNum);
+
+
 }
