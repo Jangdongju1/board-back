@@ -30,7 +30,6 @@ public class BoardController {
 
     }
 
-
     @PostMapping("")
     public ResponseEntity<? super PostBoardResponse> postBoard(@Validated @RequestBody PostBoardRequest postBoardRequest,
                                                                @AuthenticationPrincipal String email) {
@@ -43,8 +42,8 @@ public class BoardController {
                                                                    @AuthenticationPrincipal String email,
                                                                    @Validated @RequestBody PostCommentRequest req) {
         ResponseEntity<? super PostCommentResponse> response = boardService.postComment(req, email, boardNum);
-        return response;
-    }
+            return response;
+        }
 
     @GetMapping("/{boardNum}/comment-list")
     public ResponseEntity<? super GetCommentListResponse> getCommentList(@PathVariable("boardNum") int boardNum) {

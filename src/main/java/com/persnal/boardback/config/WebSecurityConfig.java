@@ -22,8 +22,12 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.io.IOException;
+import java.util.Collections;
 
 @Configuration
 @EnableWebSecurity
@@ -42,6 +46,9 @@ public class WebSecurityConfig {
         // 1) csrf, httpBasic off , 2) session 정책설정.
         httpSecurity.csrf(AbstractHttpConfigurer::disable);
         httpSecurity.httpBasic(AbstractHttpConfigurer::disable);
+        httpSecurity.cors(httpSecurityCorsConfigurer -> {
+            httpSecurityCorsConfigurer.configurationSource(corsConfigurationSource());
+        });
         httpSecurity.sessionManagement(managementConfigurer -> {
             managementConfigurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         });
@@ -72,6 +79,22 @@ public class WebSecurityConfig {
         return chain;
     }
 
+    CorsConfigurationSource corsConfigurationSource(){
+        return request -> {
+            CorsConfiguration configuration = new CorsConfiguration();
+//            configuration.setAllowedOrigins(Collections.singletonList("*"));
+            configuration.setAllowedMethods(Collections.singletonList("*"));
+            configuration.setAllowedHeaders(Collections.singletonList("*"));
+            configuration.setAllowedOriginPatterns(Collections.singletonList("*"));
+            configuration.setAllowCredentials(true);
+
+            return configuration;
+        };
+
+        //UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        //source.registerCorsConfiguration("/**", configuration);
+
+    }
     static class FailedAuthenticationEntryPoint implements AuthenticationEntryPoint {
 
         Logger logger = WorkLogger.getInstance().getLogger();

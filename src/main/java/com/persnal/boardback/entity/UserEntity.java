@@ -9,6 +9,7 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @NoArgsConstructor
@@ -20,10 +21,12 @@ public class UserEntity {
     @Id
     private String userEmail;
     private String password;
+    @Setter
     private String nickname;
     private String telNumber;
     private String address;
     private String addressDetail;
+    @Setter
     private String profileImg;
     private boolean agreedPersonal;
     //
@@ -38,4 +41,5 @@ public class UserEntity {
         //this.profileImg = req.getProfileImg();
         this.agreedPersonal = req.getAgreedPersonal();
     }
+
 }
