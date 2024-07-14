@@ -19,6 +19,6 @@
 ##### 📖API 명세
 
 
-| Url | Method | Description | 
-|-----|--------|-------------|
-| ddd | ddddd  | ddddddddddd | 
+| Method | Request | Response | description |  
+|--------|---------|----------|-------------|
+| ddd | ddddd  | dddddddddddwefwefwfefwfwefewfewf |wefwef |
