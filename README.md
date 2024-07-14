@@ -34,5 +34,11 @@
 | GET | /api/v1/user |  | {<br/>"code":"SU",<br/> "message":"sucess",<br/> "userEmail":"example@example.com",<br/> "nickname":"thisis",<br/> "profileImg":"imageUrl"<br/>} | 로그인된 유저의 정보를 요청 |
 | GET | /api/v1/user/{email} | |  {<br/>"code":"SU",<br/> "message":"sucess",<br/> "userEmail":"example@example.com",<br/> "nickname":"thisis",<br/> "profileImg":"imageUrl"<br/>} | '특정' 유저의 유저 데이터 요청 <br/> Path Variable : 유저이메일|
 | PATCH | /api/v1/user/nickname | {<br/>"nickname":"test"<br/>} | {<br/> "code" : "SU",<br/> "message" : "success" <br/>} | 유저의 닉네임 수정. | 
-| PATCH | /api/v1/user/profile-image | {<br/> "profileImg":"profile iamge url" <br/>} | {<br/> "code" : "SU",<br/> "message" : "success" <br/>} | 유저의 프로필 이미지 수정.
+| PATCH | /api/v1/user/profile-image | {<br/> "profileImg":"profile iamge url" <br/>} | {<br/> "code" : "SU",<br/> "message" : "success" <br/>} | 유저의 프로필 이미지 수정.|
+
+
+* File
+| Method | Url | RequestBody | ResponseBody | description |
+|:--------:|:---:|---------|----------|-------------|
+| POST | /api/v1/file/upload | Multi Part Form Data | FileUrl(String) | 파일 업로드 요청.<br/> 파일의 리소스 URL반환|
 
