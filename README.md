@@ -18,7 +18,9 @@
 ----------------------------------
 ##### 📖API 명세
 
+* User 
 
-| Method | Url | Request | Response | description |  
+| Method | Url | RequestBody | ResponseBody | description |  
 |:--------:|:---:|:---------|:----------|:-------------:|
 | GET | /api/v1/user | - | {<br/>"code" : "SU",<br/> "message" : "sucess",<br/> "userEmail" : "jdj881204@naver.com",<br/> "nickname" : "thisis",<br/> "profileImg" : "http://localhost:4000/file/10924cbe-1c92-4c93-89c9-6b5d7f771d39.png"<br/>} | 로그인된 유저의 정보를 요청 |
+| GET | /api/v1/{email} | - |  {<br/>"code" : "SU",<br/> "message" : "sucess",<br/> "userEmail" : "jdj881204@naver.com",<br/> "nickname" : "thisis",<br/> "profileImg" : "http://localhost:4000/file/10924cbe-1c92-4c93-89c9-6b5d7f771d39.png"<br/>} | '특정' 유저의 유저 데이터 요청 <br/> Path Variable : 유저이메일|  
