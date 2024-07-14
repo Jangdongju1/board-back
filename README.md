@@ -22,7 +22,7 @@
 * Auth
 | Method | Url | RequestBody | ResponseBody | description |  
 |:--------:|:---:|---------|:----------|:-------------:|
-| POST | /api/v1/auth/sign-up | {<br/> "userEmail":"",<br/> "password":"",<br/> "nickname":"",<br/> "telNumber":"",<br/> "address":"",<br/> "addressDetail:"",<br/> "profileImg":"",<br/> "agreedPersonal": false<br/> }| {<br/> "code":"",<br/> "message":""<br/> } | 회원가입 요청.
+| POST | /api/v1/auth/sign-up | {<br/> "userEmail":"",<br/> "password":"",<br/> "nickname":"",<br/> "telNumber":"",<br/> "address":"",<br/> "addressDetail:"",<br/> "profileImg":"",<br/> "agreedPersonal": false<br/> }| {<br/> "code":"",<br/> "message":""<br/> } | 회원가입 요청.|
 
 
 * User 
