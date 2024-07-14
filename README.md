@@ -41,5 +41,5 @@
 
 | Method | Url | RequestBody | ResponseBody | description |
 |:--------:|:---:|---------|----------|-------------|
-| POST | /api/v1/file/upload | Multi Part Form Data | FileUrl(String) | 파일 업로드 요청.<br/> 파일의 리소스 URL반환|
+| POST | /api/v1/file/upload | Multipart Form Data | FileUrl(String) | 파일 업로드 요청.<br/> 파일의 리소스 URL반환|
 
