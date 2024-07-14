@@ -21,4 +21,4 @@
 
 | Method | Request | Response | description |  
 |--------|---------|----------|-------------|
-| GET | /api/v1/user | {"code" : "SU", "message" : "sucess", "userEmail" : "jdj881204@naver.com", "nickname" : "thisis", "profileImg" : "http://localhost:4000/file/10924cbe-1c92-4c93-89c9-6b5d7f771d39.png"} | 로그인된 유저의 정보를 요청 |
+| GET | /api/v1/user | {"code" : "SU",<br/> "message" : "sucess", "userEmail" : "jdj881204@naver.com", "nickname" : "thisis", "profileImg" : "http://localhost:4000/file/10924cbe-1c92-4c93-89c9-6b5d7f771d39.png"} | 로그인된 유저의 정보를 요청 |
