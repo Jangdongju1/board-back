@@ -40,7 +40,7 @@
 * Search
 
 | Method | Url | RequestBody | ResponseBody | description |
-|:--------:|:---:|---------|----------|-------------|
+|:--------:|:---:|-------------|----------|-------------|
 | GET | /api/v1/search/popular-list |  | {<br/> "code":"SU",<br/> "message":"success",<br/> "popularWordList":[]<br/> } | 인기 검색어 리스트 요청.|
 
 
