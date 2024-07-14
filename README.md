@@ -37,6 +37,13 @@
 | PATCH |/api/v1/user/profile-image| {<br/> "profileImg":"imageUrl" <br/>} | {<br/> "code" : "SU",<br/> "message" : "success" <br/>} | 유저의 프로필 이미지 수정.|
 
 
+* Search
+
+| Method | Url | RequestBody | ResponseBody | description |
+|:--------:|:---:|---------|----------|-------------|
+| GET | /api/v1/search/popular-list |  | {<br/> "code":"SU",<br/> "message":"success",<br/> "popularWordList":[]<br/> } | 인기 검색어 리스트 요청.|
+
+
 * File
 
 | Method | Url | RequestBody | ResponseBody | description |
