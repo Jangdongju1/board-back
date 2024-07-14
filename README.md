@@ -19,6 +19,6 @@
 ##### 📖API 명세
 
 
-| Method | Request | Response | description |  
-|:--------:|---------|----------|-------------|
-| GET | /api/v1/user | {<br/>"code" : "SU",<br/> "message" : "sucess",<br/> "userEmail" : "jdj881204@naver.com",<br/> "nickname" : "thisis",<br/> "profileImg" : "http://localhost:4000/file/10924cbe-1c92-4c93-89c9-6b5d7f771d39.png"<br/>} | 로그인된 유저의 정보를 요청 |
+| Method | Url | Request | Response | description |  
+|:--------:|:---:|---------|----------|-------------|
+| GET | /api/v1/user | - | {<br/>"code" : "SU",<br/> "message" : "sucess",<br/> "userEmail" : "jdj881204@naver.com",<br/> "nickname" : "thisis",<br/> "profileImg" : "http://localhost:4000/file/10924cbe-1c92-4c93-89c9-6b5d7f771d39.png"<br/>} | 로그인된 유저의 정보를 요청 |
