@@ -11,4 +11,6 @@
      </div>
 
 * <img src="https://img.shields.io/badge/Build-%23121011?style=plastic">
-
+     <div>
+          <img src="https://img.shields.io/badge/Gradle-02303A?style=float-square&logo=Gradle&logoColor=white"><img src="https://img.shields.io/badge/8.7-515151?style=float-square">
+     </div>
