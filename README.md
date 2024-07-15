@@ -33,6 +33,7 @@
 |:---:|:---:|---|---|
 | GET | /api/v1/board/{boardNum} | |{<br/> "boardNum" : 0,<br/> "title" :"example",<br/> "content" : "example",<br/> "boardImgList" : "exampleUrl",<br/> "writeDate":"2024-06-27 23:02:53",<br/> "writerEmail":"example@example.com",<br/> "writernickname":"example",<br/> "writerProfileImg":"exampleUrl"<br/> }|
 | GET | /api/v1/user-board-list/{email} | |{<br/> "code":"SU",<br/> "message":"success",<br/> "userBoardList":[<br/>{<br/> "boardNum" : 0,<br/> "title" :"example",<br/> "content" : "example",<br/> "boardImgList" : "exampleUrl",<br/> "writeDate":"2024-06-27 23:02:53",<br/> "writerEmail":"example@example.com",<br/> "writernickname":"example",<br/> "writerProfileImg":"exampleUrl"<br/>}]<br/>} |
+| POST | /api/v1/board | {<br/> "title":"exmple",<br/> "content":"example",<br/> "boardImgList":["eampleUrl1", "exampleUrl2"]<br/> } 
 
 * 유저정보(user) 
 
