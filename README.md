@@ -31,7 +31,7 @@
   
 | Method | Url | RequestBody | ResponseBody |
 |:---:|:---:|---|---|
-| GET | /api/v1/board/{boardNum} | |{<br/> "boardNum" : 0,<br/> "title" :"example",<br/> "content" : "example",<br/> "boardImgList" : "exampleUrl",<br/> "writeDate":"2024-06-27 23:02:53",<br/> "writerEmail":"example@example.com",<br/> "writernickname":"example",<br/> "writerProfileImg":"exampleUrl"<br/> }|
+| GET | /api/v1/board/{boardNum} | |{<br/> &ensp;"boardNum" : 0,<br/> &ensp;"title" :"example",<br/> &ensp;"content" : "example",<br/> &ensp;"boardImgList" : "exampleUrl",<br/> &ensp;"writeDate":"2024-06-27 23:02:53",<br/> &ensp;"writerEmail":"example@example.com",<br/> &ensp;"writernickname":"example",<br/> &ensp;"writerProfileImg":"exampleUrl"<br/> }|
 | GET | /api/v1/user-board-list/{email} | |{<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> &ensp;"userBoardList":[<br/>&emsp;{<br/> &emsp;&ensp;"boardNum" : 0,<br/> &emsp;&ensp;"title" :"example",<br/> &emsp;&ensp;"content" : "example",<br/> &emsp;&ensp;"boardImgList":["url1","url2"],<br/> &emsp;&ensp;"writeDate":"2024-06-27 23:02:53",<br/> &emsp;&ensp;"writerEmail":"example@example.com",<br/> &emsp;&ensp;"writernickname":"example",<br/> &emsp;&ensp;"writerProfileImg":"exampleUrl"<br/>&emsp;}<br/>&ensp;]<br/>} |
 | POST | /api/v1/board |{<br/> &ensp;"title":"exmple",<br/> &ensp;"content":"example",<br/> &ensp;"boardImgList":["url1", "url2"]<br/> }| {<br/> "code":"SU",<br/> "message":"suceess"<br/> }|
 | POST | /api/v1/board/{boardNum}/comment | {<br/> "comment":"example"<br/> } | {<br/> &ensp;"code":"SU",<br/> &ensp;"message" :"success"<br/> } | 
