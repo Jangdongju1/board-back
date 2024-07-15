@@ -27,6 +27,12 @@
 | POST | /api/v1/auth/sign-in | {<br/> "userEmail":"example@example.com",<br/> "password":"example"<br/> } | {<br/> "code":"SU",<br/> "message":"success",<br/> "aceessToken":"JWT Token",<br/> "expireTime": 3600<br/> }|
 
 
+* 게시물 관련(board)
+  
+| Method | Url | RequestBody | ResponseBody |
+|:---:|:---:|---|---|
+| GET | /api/v1/board/{boardNum} | |{<br/> "boardNum" : 0,<br/> "title" :"example",<br/> "content" : "example",<br/> "boardImgList" : "exampleUrl",<br/> "writeDate":"2024-06-27 23:02:53",<br/> "writerEmail":"example@example.com",<br/> "writernickname":"example",<br/> "writerProfileImg":"exampleUrl"|
+
 * 유저정보(user) 
 
 | Method | Url | RequestBody | ResponseBody |
