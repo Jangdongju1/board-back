@@ -69,3 +69,20 @@
 |:---:|:---:|---|---|
 | POST | /api/v1/file/upload | Multipart Form Data | FileUrl(String) |
 
+----------------------------------
+##### 📖 응답코드 
+
+| Code | Message | HttpStatus |
+|---|---|---|
+| SU | success | 200 | 
+| VF | vaildation failure | 400 | 
+| DE | duplicated email | 400 | 
+| DN | duplicated nickname | 400 | 
+| DT | duplicated telnumber | 400 | 
+| NU | not exist user | 400 | 
+| NB | not exist board | 400 |
+| SF | sign in failed | 401 | 
+| AF | authentication failed | 401 | 
+| DE | database error | 500 | 
+
+
