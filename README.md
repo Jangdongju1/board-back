@@ -41,6 +41,7 @@
 | POST | /api/v1/board |{<br/> &ensp;"title":"exmple",<br/> &ensp;"content":"example",<br/> &ensp;"boardImgList":["url1", "url2"]<br/> }| {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"suceess"<br/> }|
 | POST | /api/v1/board/{boardNum}/comment | {<br/> &ensp;"comment":"example"<br/> } | {<br/> &ensp;"code":"SU",<br/> &ensp;"message" :"success"<br/> } | 
 | PUT | /api/v1/board/{boardNum}/favorite | |{<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> }|
+| PATCH | /api/v1/board/{boardNum} | {<br/> &ensp;"title":"example",<br/> &ensp;"content":"example",<br/> &ensp;"boardImgList":["url1","url2"]<br/> } | {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"suceess"<br/> |  
 | DELETE | /api/b1/board/{boardNum} | | {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> } |
 
 
