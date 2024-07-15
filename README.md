@@ -73,7 +73,7 @@
 ##### 📖 응답코드 
 
 | Code | Message | HttpStatus |
-|---|---|---|
+|:---:|:---:|:---:|
 | SU | success | 200 | 
 | VF | vaildation failure | 400 | 
 | DE | duplicated email | 400 | 
