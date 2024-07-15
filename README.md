@@ -49,7 +49,7 @@
   
 | Method | Url | RequestBody | ResponseBody |
 |:---:|:---:|---|---|
-| POST | /api/v1/auth/sign-up | {<br/> &ensp;"userEmail":"example@example.com",<br/> &ensp;"password":"test1234",<br/> &ensp;"nickname":"test",<br/> &ensp;"telNumber":"123-1234-1234",<br/> &ensp;"address":"example",<br/> &ensp;"addressDetail:"example",<br/> &ensp;"profileImg":"imageUrl",<br/> &ensp;"agreedPersonal": false<br/> }| {<br/> "code":"SU",<br/> "message":"success"<br/> } |
+| POST | /api/v1/auth/sign-up | {<br/> &ensp;"userEmail":"example@example.com",<br/> &ensp;"password":"test1234",<br/> &ensp;"nickname":"test",<br/> &ensp;"telNumber":"123-1234-1234",<br/> &ensp;"address":"example",<br/> &ensp;"addressDetail:"example",<br/> &ensp;"profileImg":"imageUrl",<br/> &ensp;"agreedPersonal": false<br/> }| {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success"<br/> } |
 | POST | /api/v1/auth/sign-in | {<br/> &ensp;"userEmail":"example@example.com",<br/> &ensp;"password":"example"<br/> } | {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> &ensp;"aceessToken":"JWT Token",<br/> &ensp;"expireTime": 3600<br/> }|
 
 
