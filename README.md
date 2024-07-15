@@ -40,8 +40,8 @@
 
 | Method | Url | RequestBody | ResponseBody | 
 |:---:|:---:|---|---|
-| GET | /api/v1/search/popular-list |  | {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> "popularWordList":["example1","example2"]<br/> } |
-| GET | /api/v1/{searchWord}/relation-list |  | {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> "relativeWordList":["example1","example2"]<br/> } | 
+| GET | /api/v1/search/popular-list |  | {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> &ensp;"popularWordList":["example1","example2"]<br/> } |
+| GET | /api/v1/{searchWord}/relation-list |  | {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> &ensp;"relativeWordList":["example1","example2"]<br/> } | 
 
 
 
