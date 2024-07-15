@@ -18,15 +18,6 @@
 ----------------------------------
 ##### 📖 API 명세
 
-
-* 회원가입 및 로그인(auth)
-  
-| Method | Url | RequestBody | ResponseBody |
-|:---:|:---:|---|---|
-| POST | /api/v1/auth/sign-up | {<br/> "userEmail":"example@example.com",<br/> "password":"test1234",<br/> "nickname":"test",<br/> "telNumber":"123-1234-1234",<br/> "address":"example",<br/> "addressDetail:"example",<br/> "profileImg":"imageUrl",<br/> "agreedPersonal": false<br/> }| {<br/> "code":"SU",<br/> "message":"success"<br/> } |
-| POST | /api/v1/auth/sign-in | {<br/> "userEmail":"example@example.com",<br/> "password":"example"<br/> } | {<br/> "code":"SU",<br/> "message":"success",<br/> "aceessToken":"JWT Token",<br/> "expireTime": 3600<br/> }|
-
-
 * 게시물 관련(board)
   
 | Method | Url | RequestBody | ResponseBody |
@@ -44,6 +35,13 @@
 | PATCH | /api/v1/board/{boardNum} | {<br/> &ensp;"title":"example",<br/> &ensp;"content":"example",<br/> &ensp;"boardImgList":["url1","url2"]<br/> } | {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"suceess"<br/> |  
 | DELETE | /api/b1/board/{boardNum} | | {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> } |
 
+
+* 회원가입 및 로그인(auth)
+  
+| Method | Url | RequestBody | ResponseBody |
+|:---:|:---:|---|---|
+| POST | /api/v1/auth/sign-up | {<br/> "userEmail":"example@example.com",<br/> "password":"test1234",<br/> "nickname":"test",<br/> "telNumber":"123-1234-1234",<br/> "address":"example",<br/> "addressDetail:"example",<br/> "profileImg":"imageUrl",<br/> "agreedPersonal": false<br/> }| {<br/> "code":"SU",<br/> "message":"success"<br/> } |
+| POST | /api/v1/auth/sign-in | {<br/> "userEmail":"example@example.com",<br/> "password":"example"<br/> } | {<br/> "code":"SU",<br/> "message":"success",<br/> "aceessToken":"JWT Token",<br/> "expireTime": 3600<br/> }|
 
 
 * 유저정보(user) 
