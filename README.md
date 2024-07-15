@@ -40,8 +40,8 @@
 
 | Method | Url | RequestBody | ResponseBody | 
 |:---:|:---:|---|---|
-| GET | /api/v1/search/popular-list |  | {<br/> "code":"SU",<br/> "message":"success",<br/> "popularWordList":["example1","example2"]<br/> } |
-| GET | /api/v1/{searchWord}/relation-list |  | {<br/> "code":"SU",<br/> "message":"success",<br/> "relativeWordList":["example1","example2"]<br/> } | 
+| GET | /api/v1/search/popular-list |  | {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> "popularWordList":["example1","example2"]<br/> } |
+| GET | /api/v1/{searchWord}/relation-list |  | {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> "relativeWordList":["example1","example2"]<br/> } | 
 
 
 
@@ -49,18 +49,18 @@
   
 | Method | Url | RequestBody | ResponseBody |
 |:---:|:---:|---|---|
-| POST | /api/v1/auth/sign-up | {<br/> "userEmail":"example@example.com",<br/> "password":"test1234",<br/> "nickname":"test",<br/> "telNumber":"123-1234-1234",<br/> "address":"example",<br/> "addressDetail:"example",<br/> "profileImg":"imageUrl",<br/> "agreedPersonal": false<br/> }| {<br/> "code":"SU",<br/> "message":"success"<br/> } |
-| POST | /api/v1/auth/sign-in | {<br/> "userEmail":"example@example.com",<br/> "password":"example"<br/> } | {<br/> "code":"SU",<br/> "message":"success",<br/> "aceessToken":"JWT Token",<br/> "expireTime": 3600<br/> }|
+| POST | /api/v1/auth/sign-up | {<br/> &ensp;"userEmail":"example@example.com",<br/> &ensp;"password":"test1234",<br/> &ensp;"nickname":"test",<br/> &ensp;"telNumber":"123-1234-1234",<br/> &ensp;"address":"example",<br/> &ensp;"addressDetail:"example",<br/> &ensp;"profileImg":"imageUrl",<br/> &ensp;"agreedPersonal": false<br/> }| {<br/> "code":"SU",<br/> "message":"success"<br/> } |
+| POST | /api/v1/auth/sign-in | {<br/> &ensp;"userEmail":"example@example.com",<br/> &ensp;"password":"example"<br/> } | {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> &ensp;"aceessToken":"JWT Token",<br/> &ensp;"expireTime": 3600<br/> }|
 
 
 * 유저정보(user) 
 
 | Method | Url | RequestBody | ResponseBody |
 |:---:|:---:|---|---|
-| GET | /api/v1/user |  | {<br/>"code":"SU",<br/> "message":"sucess",<br/> "userEmail":"example@example.com",<br/> "nickname":"thisis",<br/> "profileImg":"imageUrl"<br/>} |
-| GET | /api/v1/user/{email} | |{<br/>"code":"SU",<br/> "message":"sucess",<br/> "userEmail":"example@example.com",<br/> "nickname":"thisis",<br/> "profileImg":"imageUrl"<br/>} |
-| PATCH | /api/v1/user/nickname |{<br/>"nickname":"test"<br/>} | {<br/> "code" : "SU",<br/> "message" : "success" <br/>} |
-| PATCH | /api/v1/user/profile-image | {<br/> "profileImg":"imageUrl" <br/>} | {<br/> "code" : "SU",<br/> "message" : "success" <br/>} |
+| GET | /api/v1/user |  | {<br/>&ensp;"code":"SU",<br/> &ensp;"message":"sucess",<br/> &ensp;"userEmail":"example@example.com",<br/> &ensp;"nickname":"thisis",<br/> &ensp;"profileImg":"imageUrl"<br/>} |
+| GET | /api/v1/user/{email} | |{<br/>&ensp;"code":"SU",<br/> &ensp;"message":"sucess",<br/> &ensp;"userEmail":"example@example.com",<br/> &ensp;"nickname":"thisis",<br/> &ensp;"profileImg":"imageUrl"<br/>} |
+| PATCH | /api/v1/user/nickname |{<br/>&ensp;"nickname":"test"<br/>} | {<br/> &ensp;"code" : "SU",<br/> &ensp;"message" : "success" <br/>} |
+| PATCH | /api/v1/user/profile-image | {<br/> &ensp;"profileImg":"imageUrl" <br/>} | {<br/> &ensp;"code" : "SU",<br/> &ensp;"message" : "success" <br/>} |
 
 
 * 파일업로드(file)
