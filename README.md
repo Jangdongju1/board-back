@@ -19,16 +19,15 @@
 ##### 📖 API 명세
 
 
-* Auth
-회원가입 및 로그인 관련Api
-
+* 회원가입 및 로그인(auth)
+  
 | Method | Url | RequestBody | ResponseBody |
 |:---:|:---:|---|---|
 | POST | /api/v1/auth/sign-up | {<br/> "userEmail":"example@example.com",<br/> "password":"test1234",<br/> "nickname":"test",<br/> "telNumber":"123-1234-1234",<br/> "address":"example",<br/> "addressDetail:"example",<br/> "profileImg":"imageUrl",<br/> "agreedPersonal": false<br/> }| {<br/> "code":"SU",<br/> "message":"success"<br/> } |
 | POST | /api/v1/auth/sign-in | {<br/> "userEmail":"example@example.com",<br/> "password":"example"<br/> } | {<br/> "code":"SU",<br/> "message":"success",<br/> "aceessToken":"JWT Token",<br/> "expireTime": 3600<br/> }|
 
 
-* User 
+* 유저정보(user) 
 
 | Method | Url | RequestBody | ResponseBody |
 |:---:|:---:|---|---|
@@ -38,7 +37,7 @@
 | PATCH | /api/v1/user/profile-image | {<br/> "profileImg":"imageUrl" <br/>} | {<br/> "code" : "SU",<br/> "message" : "success" <br/>} |
 
 
-* Search
+* 검색어 관련(search)
 
 | Method | Url | RequestBody | ResponseBody | 
 |:---:|:---:|---|---|
@@ -46,7 +45,7 @@
 | GET | /api/v1/{searchWord}/relation-list |  | {<br/> "code":"SU",<br/> "message":"success",<br/> "relativeWordList":["example1","example2"]<br/> } | 
 
 
-* File
+* 파일업로드(file)
 
 | Method | Url | RequestBody | ResponseBody | 
 |:---:|:---:|---|---|
