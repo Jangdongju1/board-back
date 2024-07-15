@@ -20,7 +20,7 @@
 
 
 * Auth
-
+회원가입 및 로그인 관려 Api
 | Method | Url | RequestBody | ResponseBody |
 |:---:|:---:|---|---|
 | POST | /api/v1/auth/sign-up | {<br/> "userEmail":"example@example.com",<br/> "password":"test1234",<br/> "nickname":"test",<br/> "telNumber":"123-1234-1234",<br/> "address":"example",<br/> "addressDetail:"example",<br/> "profileImg":"imageUrl",<br/> "agreedPersonal": false<br/> }| {<br/> "code":"SU",<br/> "message":"success"<br/> } |
