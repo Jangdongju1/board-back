@@ -34,7 +34,8 @@
 | GET | /api/v1/board/{boardNum} | |{<br/> "boardNum" : 0,<br/> "title" :"example",<br/> "content" : "example",<br/> "boardImgList" : "exampleUrl",<br/> "writeDate":"2024-06-27 23:02:53",<br/> "writerEmail":"example@example.com",<br/> "writernickname":"example",<br/> "writerProfileImg":"exampleUrl"<br/> }|
 | GET | /api/v1/user-board-list/{email} | |{<br/> "code":"SU",<br/> "message":"success",<br/> "userBoardList":[<br/>{<br/> "boardNum" : 0,<br/> "title" :"example",<br/> "content" : "example",<br/> "boardImgList" : "exampleUrl",<br/> "writeDate":"2024-06-27 23:02:53",<br/> "writerEmail":"example@example.com",<br/> "writernickname":"example",<br/> "writerProfileImg":"exampleUrl"<br/>}]<br/>} |
 | POST | /api/v1/board |{<br/> "title":"exmple",<br/> "content":"example",<br/> "boardImgList":["url1", "url2"]<br/> }| {<br/> "code":"SU",<br/> "message":"suceess"<br/> }|
-| POST | /api/v1/{boardNum}/comment | {<br/> "comment":"example"<br/> } | {<br/> "code":"SU",<br/> "message" :"success"<br/> }
+| POST | /api/v1/board/{boardNum}/comment | {<br/> "comment":"example"<br/> } | {<br/> "code":"SU",<br/> "message" :"success"<br/> } | 
+| GET | /api/v1/board/comment-list |  |{<br/> "code":"SU",<br/> "message":"example",<br/> "commentList":[{"nickname":"example", "profileImg":"url", "writeDate":"2024-06-27 23:02:53", "content":"example"}] <br/>}|
 
 
 * 유저정보(user) 
