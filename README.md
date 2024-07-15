@@ -37,8 +37,9 @@
 | GET | /api/v1/board/{boardNum}/favoite-list | |{<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> &ensp;"favoriteList":[<br/>&emsp;{<br/> &emsp;&ensp;"userEmail":"example@example.com",<br/> &emsp;&ensp;"nickname":"example",<br/> &emsp;&ensp;"profileImg":"url"<br/> &emsp;}<br/>&ensp;]<br/> } |  
 | GET | /api/v1/board/{boardNum}/increase-view-count | |{<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success"<br/>}|
 | GET | /api/v1/latest-list | | {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> &ensp;"latestBoardList":[<br/>&emsp;{<br/> &emsp;&ensp;"boardNum" : 0,<br/> &emsp;&ensp;"title" :"example",<br/> &emsp;&ensp;"content" : "example",<br/> &emsp;&ensp;"writeDate":"2024-06-27 23:02:53",<br/> &emsp;&ensp;"nickname":"example",<br/> &emsp;&ensp;"boardTitleImg":"url",<br/> &emsp;&ensp;"favoriteCnt":0,<br/> &emsp;&ensp;"commentCnt":0,<br/> &emsp;&ensp;"viewCnt":0,<br/> &emsp;&ensp;"writerProfileImg":"url"<br/> &emsp;}<br/>&ensp;]<br/>} | 
+| GET | /api/v1/top-3 | | {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> &ensp;"top3BoardList":[<br/>&emsp;{<br/> &emsp;&ensp;"boardNum" : 0,<br/> &emsp;&ensp;"title" :"example",<br/> &emsp;&ensp;"content" : "example",<br/> &emsp;&ensp;"writeDate":"2024-06-27 23:02:53",<br/> &emsp;&ensp;"nickname":"example",<br/> &emsp;&ensp;"boardTitleImg":"url",<br/> &emsp;&ensp;"favoriteCnt":0,<br/> &emsp;&ensp;"commentCnt":0,<br/> &emsp;&ensp;"viewCnt":0,<br/> &emsp;&ensp;"writerProfileImg":"url"<br/> &emsp;}<br/>&ensp;]<br/>} | 
 | POST | /api/v1/board |{<br/> &ensp;"title":"exmple",<br/> &ensp;"content":"example",<br/> &ensp;"boardImgList":["url1", "url2"]<br/> }| {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"suceess"<br/> }|
-| POST | /api/v1/board/{boardNum}/comment | {<br/> "comment":"example"<br/> } | {<br/> &ensp;"code":"SU",<br/> &ensp;"message" :"success"<br/> } | 
+| POST | /api/v1/board/{boardNum}/comment | {<br/> &ensp;"comment":"example"<br/> } | {<br/> &ensp;"code":"SU",<br/> &ensp;"message" :"success"<br/> } | 
 | PUT | /api/v1/board/{boardNum}/favorite | |{<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> }|
 
 
