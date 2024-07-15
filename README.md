@@ -36,6 +36,15 @@
 | DELETE | /api/b1/board/{boardNum} | | {<br/> &ensp;"code":"SU",<br/> &ensp;"message":"success",<br/> } |
 
 
+* 검색어 관련(search)
+
+| Method | Url | RequestBody | ResponseBody | 
+|:---:|:---:|---|---|
+| GET | /api/v1/search/popular-list |  | {<br/> "code":"SU",<br/> "message":"success",<br/> "popularWordList":["example1","example2"]<br/> } |
+| GET | /api/v1/{searchWord}/relation-list |  | {<br/> "code":"SU",<br/> "message":"success",<br/> "relativeWordList":["example1","example2"]<br/> } | 
+
+
+
 * 회원가입 및 로그인(auth)
   
 | Method | Url | RequestBody | ResponseBody |
@@ -52,14 +61,6 @@
 | GET | /api/v1/user/{email} | |{<br/>"code":"SU",<br/> "message":"sucess",<br/> "userEmail":"example@example.com",<br/> "nickname":"thisis",<br/> "profileImg":"imageUrl"<br/>} |
 | PATCH | /api/v1/user/nickname |{<br/>"nickname":"test"<br/>} | {<br/> "code" : "SU",<br/> "message" : "success" <br/>} |
 | PATCH | /api/v1/user/profile-image | {<br/> "profileImg":"imageUrl" <br/>} | {<br/> "code" : "SU",<br/> "message" : "success" <br/>} |
-
-
-* 검색어 관련(search)
-
-| Method | Url | RequestBody | ResponseBody | 
-|:---:|:---:|---|---|
-| GET | /api/v1/search/popular-list |  | {<br/> "code":"SU",<br/> "message":"success",<br/> "popularWordList":["example1","example2"]<br/> } |
-| GET | /api/v1/{searchWord}/relation-list |  | {<br/> "code":"SU",<br/> "message":"success",<br/> "relativeWordList":["example1","example2"]<br/> } | 
 
 
 * 파일업로드(file)
