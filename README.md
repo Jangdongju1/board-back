@@ -19,7 +19,7 @@
           <img src="https://img.shields.io/badge/Gradle-02303A?style=float-square&logo=Gradle&logoColor=white"><img src="https://img.shields.io/badge/8.7-515151?style=float-square">
      </div>
 
-
+----------------------------------
 ##### 📖 ERD
 ----------------------------------
 ##### 📖 API 명세
