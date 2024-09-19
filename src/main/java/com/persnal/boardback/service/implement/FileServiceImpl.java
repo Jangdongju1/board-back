@@ -56,7 +56,6 @@ public class FileServiceImpl implements FileService {
         try {
             resource = new UrlResource("file:"+ filepath + fileName);
 
-
         }catch (Exception e){
             logger.error(GlobalVariable.logPattern,getClass().getName(), Utils.getStackTrace(e));
             return null;

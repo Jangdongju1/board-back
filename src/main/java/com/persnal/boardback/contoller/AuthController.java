@@ -1,5 +1,4 @@
 package com.persnal.boardback.contoller;
-
 import com.persnal.boardback.dto.request.auth.SignInRequest;
 import com.persnal.boardback.dto.request.auth.SignUpRequest;
 import com.persnal.boardback.dto.response.auth.SignInResponse;
