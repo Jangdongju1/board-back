@@ -2,6 +2,8 @@ package com.persnal.boardback.config;
 
 import com.google.gson.Gson;
 import com.persnal.boardback.common.GlobalVariable;
+import com.persnal.boardback.common.ResponseCode;
+import com.persnal.boardback.common.ResponseMessage;
 import com.persnal.boardback.common.Utils;
 import com.persnal.boardback.common.logger.WorkLogger;
 import com.persnal.boardback.etc.ApiResponse;
@@ -82,18 +84,13 @@ public class WebSecurityConfig {
     CorsConfigurationSource corsConfigurationSource(){
         return request -> {
             CorsConfiguration configuration = new CorsConfiguration();
-//            configuration.setAllowedOrigins(Collections.singletonList("*"));
-            configuration.setAllowedMethods(Collections.singletonList("*"));
-            configuration.setAllowedHeaders(Collections.singletonList("*"));
-            configuration.setAllowedOriginPatterns(Collections.singletonList("*"));
+            configuration.setAllowedMethods(Collections.singletonList("*")); // 1) get 2)post ....
+            configuration.setAllowedHeaders(Collections.singletonList("*")); // 1) Authentication, 2)Content-Type
+            configuration.setAllowedOriginPatterns(Collections.singletonList("*"));  // 모든 도메인으로 부터의 요청 허용.
             configuration.setAllowCredentials(true);
 
             return configuration;
         };
-
-        //UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        //source.registerCorsConfiguration("/**", configuration);
-
     }
     static class FailedAuthenticationEntryPoint implements AuthenticationEntryPoint {
 
@@ -107,8 +104,8 @@ public class WebSecurityConfig {
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
 
             ApiResponse rsp = new ApiResponse();
-            rsp.setCode("AF");
-            rsp.setMessage("Authentication Failed");
+            rsp.setCode(ResponseCode.AUTHENTICATION_FAILED);
+            rsp.setMessage(ResponseMessage.AUTHENTICATION_FAILED);
             response.getWriter().write(new Gson().toJson(rsp));
         }
     }
